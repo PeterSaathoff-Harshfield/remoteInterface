@@ -74,9 +74,7 @@ public:
   }
   
   void adjustMode(char direction) {
-    
     modes[currentMode]->adjust(direction);
-    
   }
   
 };

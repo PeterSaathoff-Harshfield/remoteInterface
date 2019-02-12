@@ -19,8 +19,6 @@ private:
     {70, 160, 70}
   };
   
-  
-  
   int colorState;
   
 public:

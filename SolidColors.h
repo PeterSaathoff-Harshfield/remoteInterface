@@ -22,29 +22,29 @@ private:
   int colorState;
   
 public:
- SolidColors() : Mode() {
-   colorState = 0;
- } 
+  SolidColors() : Mode() {
+    colorState = 0;
+  } 
  
- void get(long now, int rgb[]) {
-   for (int i = 0; i < 3; i++) {
-     rgb[i] = colors[colorState][i];
-   }
- }
+  void get(long now, int rgb[]) {
+    for (int i = 0; i < 3; i++) {
+      rgb[i] = colors[colorState][i];
+    }
+  }
  
- void adjust(char direction) {
-   if (direction == 'l') {
-     colorState -= 1;
-   }
-   else if (direction == 'r') {
-     colorState += 1;
-   }
+  void adjust(char direction) {
+    if (direction == 'l') {
+      colorState -= 1;
+    }
+    else if (direction == 'r') {
+      colorState += 1;
+    }
    
-   if (colorState < 0) {
-     colorState = colorState + numberOfColors;
-   }
-   else if (colorState > 0) {
-     colorState = colorState % numberOfColors;
-   } 
- }
+    if (colorState < 0) {
+      colorState = colorState + numberOfColors;
+    }
+    else if (colorState > 0) {
+      colorState = colorState % numberOfColors;
+    } 
+  }
 };
